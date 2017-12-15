@@ -37,8 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case USER_INFO:
-                String name = data.getStringExtra("USER_NAME");
-                String phone = data.getStringExtra("USER_PHONE");
+                if(resultCode == RESULT_OK) {
+                     String name = data.getStringExtra("USER_NAME");
+                     String phone = data.getStringExtra("USER_PHONE");
+                }
+                else{
+                        finish();
+                }
                 break;
         }
         }
@@ -57,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+               Intent userinfolayout = new Intent(MainActivity.this, UserActivity.class);
+                startActivityForResult(userinfolayout,USER_INFO);   
             }
         });
     }
