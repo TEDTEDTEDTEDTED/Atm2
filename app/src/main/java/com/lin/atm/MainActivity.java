@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     boolean login = false;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 if(resultCode == RESULT_OK) {
                      String name = data.getStringExtra("USER_NAME");
                      String phone = data.getStringExtra("USER_PHONE");
+                    Toast.makeText(this,"Name:"+name,Toast.LENGTH_LONG).show();
+                    Toast.makeText(this,"Phone:"+phone,Toast.LENGTH_LONG).show();
                 }
                 else{
                         finish();

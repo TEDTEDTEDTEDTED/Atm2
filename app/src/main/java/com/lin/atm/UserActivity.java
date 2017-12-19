@@ -15,9 +15,9 @@ public class UserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         edname = (EditText) findViewById(R.id.ed＿name);
         edphone = (EditText) findViewById(R.id.ed_phone);
-        edName.setText(getSharedPreferences("atm", MODE_PRIVATE)
+        edname.setText(getSharedPreferences("atm", MODE_PRIVATE)
                 .getString("Name", ""));
-        edPhone.setText(getSharedPreferences("atm", MODE_PRIVATE)
+        edphone.setText(getSharedPreferences("atm", MODE_PRIVATE)
                 .getString("Phone", ""));
     }
     public void ok(View view){
