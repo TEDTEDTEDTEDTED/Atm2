@@ -54,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       /* Intent ch8layout = new Intent(this,CH8Activity.class);
+        startActivity(ch8layout);*/
+
         if(!login){
             Intent loginlayout = new Intent(this,LoginActivity.class);
             startActivityForResult(loginlayout,FUNG_LOGIN);
