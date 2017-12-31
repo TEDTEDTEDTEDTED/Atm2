@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lin.atm">
+    package="com.tedtedtedtedted.atm">
 
     <application
         android:allowBackup="true"
@@ -20,8 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".UserActivity" />
-        <activity android:name=".CH8Activity"></activity>
+        <activity android:name=".UserInfoActivity" />
+        <activity android:name=".CH8Activity" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".CityActivity" />
+        <activity android:name=".AreaActivity"></activity>
     </application>
 
 </manifest>

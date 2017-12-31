@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Atm</string>
     <string name="action_settings">Settings</string>
+    <string name="age">
+        <item>16</item>>
+
+    </string>
+    >
 </resources>
