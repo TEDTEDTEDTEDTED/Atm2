@@ -1,5 +1,6 @@
 package com.tedtedtedtedted.atm;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,12 +23,21 @@ public class LoginActivity extends AppCompatActivity {
                 .getString("ID", "" ));
 
     }
+
+    public void findviews(){
+
+        edUserid=(EditText)findViewById(R.id.userid);
+        edpasswd=(EditText)findViewById(R.id.passwd);
+    }
     public void login(View view){
         String userid = edUserid.getText().toString();
         String passwd = edpasswd.getText().toString();
         if("jack".equals(userid) && "1234".equals(passwd)){
             Toast.makeText(this,"登入成功",Toast.LENGTH_LONG).show();
-            //SharedPreferences setting =
+           /* SharedPreferences setting =getSharedPreferences("atm",MODE_PRIVATE);
+            setting.edit()
+                    .putString("USERID",uid)
+                    .commit();*/
             getIntent().putExtra("EXRA_USERID",userid);
             getIntent().putExtra("EXRA_PASSWD",passwd);
             setResult(RESULT_OK,getIntent());

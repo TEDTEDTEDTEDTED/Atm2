@@ -1,8 +1,10 @@
 package com.tedtedtedtedted.atm;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -70,8 +72,21 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent userinfolayout = new Intent(MainActivity.this, UserInfoActivity.class);
-                startActivityForResult(userinfolayout,USER_INFO);   
+              Intent userinfolayout = new Intent(MainActivity.this, UserInfoActivity.class);
+                startActivityForResult(userinfolayout,USER_INFO);
+
+
+
+                /*Snackbar.make(view, "想要顯示的字串", Snackbar.LENGTH_LONG)
+                        .setAction("Action", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                            }
+                        }).setActionTextColor(Color.YELLOW).show();*/
+
+
+
             }
         });
     }
