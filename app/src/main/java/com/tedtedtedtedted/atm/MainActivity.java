@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     boolean login = false;
     public static final int  FUNG_LOGIN = 1 ;
     public static final int  USER_INFO = 2;
-
+    String title = getString(R.string.mytitle);
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case USER_INFO:
                 if(resultCode == RESULT_OK) {
-                     String name = data.getStringExtra("USER_NAME");
+                     String name = data.getStringExtra(getString(R.string.user_name));
                      String phone = data.getStringExtra("USER_PHONE");
                     Toast.makeText(this,"Name:"+name,Toast.LENGTH_LONG).show();
                     Toast.makeText(this,"Phone:"+phone,Toast.LENGTH_LONG).show();

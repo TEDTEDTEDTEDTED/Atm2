@@ -36,7 +36,7 @@ public class UserInfoActivity extends AppCompatActivity {
     public void ok(View view){
         String name = edname.getText().toString();
         String phone = edphone.getText().toString();
-        getIntent().putExtra("USER_NAME", name);
+        getIntent().putExtra(getString(R.string.user_name), name);
         getIntent().putExtra("USER_PHONE", phone);
         setResult(RESULT_OK, getIntent());
         finish();
